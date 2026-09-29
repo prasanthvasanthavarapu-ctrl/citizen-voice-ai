@@ -1,0 +1,138 @@
+import { InfrastructureCategory, InfrastructureCategoryId } from '../types';
+
+export const INFRASTRUCTURE_CATEGORIES: InfrastructureCategory[] = [
+  {
+    id: 'drinking_water',
+    name: 'Drinking Water',
+    iconName: 'Droplets',
+    color: '#0284C7',
+    description: 'Clean potable piped water, community filtration plants, and reservoir security.',
+    defaultWeight: 0.95,
+  },
+  {
+    id: 'roads',
+    name: 'Roads & Bridges',
+    iconName: 'Route',
+    color: '#F59E0B',
+    description: 'All-weather rural connectivity, arterial roads, bridge links, and pothole resilience.',
+    defaultWeight: 0.90,
+  },
+  {
+    id: 'healthcare',
+    name: 'Healthcare & Clinics',
+    iconName: 'Activity',
+    color: '#EF4444',
+    description: 'Primary Health Centers (PHCs), mobile medical units, maternal care, and emergency response.',
+    defaultWeight: 0.96,
+  },
+  {
+    id: 'electricity',
+    name: 'Electricity & Grid',
+    iconName: 'Zap',
+    color: '#EAB308',
+    description: 'Continuous power supply, substation upgrades, and last-mile grid expansion.',
+    defaultWeight: 0.88,
+  },
+  {
+    id: 'education',
+    name: 'Education & Schools',
+    iconName: 'GraduationCap',
+    color: '#8B5CF6',
+    description: 'Smart classrooms, village schools, laboratory equipment, and safe learning centers.',
+    defaultWeight: 0.85,
+  },
+  {
+    id: 'public_transport',
+    name: 'Public Transport',
+    iconName: 'Bus',
+    color: '#06B6D4',
+    description: 'Inter-district bus networks, feeder transit systems, and accessible transit terminals.',
+    defaultWeight: 0.82,
+  },
+  {
+    id: 'internet_connectivity',
+    name: 'Internet & Telecom',
+    iconName: 'Wifi',
+    color: '#3B82F6',
+    description: 'Optical fiber last-mile, 5G/4G towers, community digital kiosks, and public Wi-Fi.',
+    defaultWeight: 0.84,
+  },
+  {
+    id: 'sanitation',
+    name: 'Sanitation & Sewage',
+    iconName: 'ShieldCheck',
+    color: '#10B981',
+    description: 'Community sanitation complexes, underground drainage, and fecal sludge management.',
+    defaultWeight: 0.89,
+  },
+  {
+    id: 'waste_management',
+    name: 'Waste Management',
+    iconName: 'Trash2',
+    color: '#64748B',
+    description: 'Solid waste processing, segregation units, composting, and landfill remediation.',
+    defaultWeight: 0.78,
+  },
+  {
+    id: 'housing',
+    name: 'Affordable Housing',
+    iconName: 'Home',
+    color: '#F97316',
+    description: 'Climate-resilient public housing, slum redevelopment, and disaster-safe shelters.',
+    defaultWeight: 0.83,
+  },
+  {
+    id: 'agriculture',
+    name: 'Agriculture & Irrigation',
+    iconName: 'Sprout',
+    color: '#84CC16',
+    description: 'Micro-irrigation canals, cold-storage warehouses, grain silos, and market yards.',
+    defaultWeight: 0.91,
+  },
+  {
+    id: 'public_safety',
+    name: 'Public Safety & Lighting',
+    iconName: 'ShieldAlert',
+    color: '#EC4899',
+    description: 'Solar street lighting, CCTV surveillance, emergency call boxes, and fire hydrants.',
+    defaultWeight: 0.80,
+  },
+  {
+    id: 'flood_management',
+    name: 'Flood Management',
+    iconName: 'Waves',
+    color: '#0EA5E9',
+    description: 'Stormwater embankments, flood early warning sirens, retention basins, and culverts.',
+    defaultWeight: 0.93,
+  },
+  {
+    id: 'renewable_energy',
+    name: 'Renewable Microgrids',
+    iconName: 'Sun',
+    color: '#14B8A6',
+    description: 'Decentralized solar microgrids, biomass generators, and community battery storage.',
+    defaultWeight: 0.87,
+  },
+  {
+    id: 'digital_infrastructure',
+    name: 'Digital DPI & Services',
+    iconName: 'Cpu',
+    color: '#6366F1',
+    description: 'Citizen service centers, biometric identity terminals, and open-source data exchanges.',
+    defaultWeight: 0.86,
+  },
+  {
+    id: 'employment_infrastructure',
+    name: 'Employment & Skilling Hubs',
+    iconName: 'Briefcase',
+    color: '#A855F7',
+    description: 'Rural vocational skilling centers, artisan craft clusters, and local tech incubators.',
+    defaultWeight: 0.79,
+  },
+];
+
+export const getCategoryById = (id: InfrastructureCategoryId): InfrastructureCategory => {
+  return (
+    INFRASTRUCTURE_CATEGORIES.find((c) => c.id === id) || INFRASTRUCTURE_CATEGORIES[0]
+  );
+};
